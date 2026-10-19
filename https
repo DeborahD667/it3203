@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="What encryption protects, how certificates support identity, and why a secure connection is only part of the story.">
+  <title>HTTPS and connection security</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- The same header and menu appear on every page. -->
+  <header class="site-header">
+    <p class="site-title">HTTP and HTTPS</p>
+    <p>Deborah Daramola | IT 3203</p>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="evolution.html">HTTP History</a>
+      <a href="https.html" aria-current="page">HTTPS</a>
+      <a href="concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <!-- Main research content. -->
+  <main id="main">
+    <header>
+      <h1>HTTPS and connection security</h1>
+      <p>What encryption protects, how certificates support identity, and why a secure connection is only part of the story.</p>
+    </header>
+    
+      
+        <section id="protection"><h2>HTTP with a protected connection</h2><p>HTTPS uses HTTP over a secured connection. The application still exchanges methods, headers, status codes, and content. TLS provides the security properties that ordinary unencrypted HTTP lacks. <a href="references.html#rfc9110">[5]</a></p>
+          <dl><dt>Confidentiality</dt><dd>Encryption makes application data unreadable to someone merely observing the network path.</dd><dt>Integrity</dt><dd>Cryptographic protection helps detect unauthorized changes to data in transit.</dd><dt>Authentication</dt><dd>Certificate validation helps a browser establish that the server is authorized for the requested hostname.</dd></dl><p class="source-note">TLS security goals: <a href="references.html#rfc8446">RFC 8446 [6]</a>.</p>
+        </section>
+        <section id="tls"><h2>TLS and the certificate chain</h2><p>In a simplified TLS handshake, the client and server negotiate security parameters and establish shared keys. The server normally supplies a certificate, and the browser checks the hostname and a chain of trust to a trusted authority. TLS 1.3 protects application data using negotiated symmetric keys. <a href="references.html#rfc8446">[6]</a></p>
+          <figure><img src="assets/https-layers.svg" width="960" height="400" loading="lazy" alt="HTTP defines the meaning of requests and responses. TLS protects the connection. TCP carries HTTP/1.1 and HTTP/2, while HTTP/3 uses QUIC with TLS 1.3 integrated."><figcaption>Figure 2. A simplified view of HTTP and security. QUIC integrates TLS 1.3 rather than placing a separate TLS record layer above TCP. Based on RFC 8446 and RFC 9114.</figcaption></figure>
+          <p>A valid certificate helps establish the server’s identity for a domain. It does not prove that the website’s owner is honest or that every page is safe. Users should still check the exact domain and treat unexpected requests for credentials cautiously.</p>
+        </section>
+        <section id="limits"><h2>What HTTPS does not solve</h2><ul><li>A phishing website can use HTTPS and a valid certificate for its own domain.</li><li>Encryption in transit does not prevent vulnerable application code or compromised accounts.</li><li>Protection on the connection does not determine how the server stores or shares information afterward.</li></ul><aside class="note"><h3>Connection security and website trust</h3><p>HTTPS protects communication with the identified server. Safe use also depends on the application, the user’s device, and the organization handling the data.</p></aside></section>
+        <section id="practice"><h2>Example: submitting a form</h2><p>Imagine entering information into an inquiry form. With HTTPS, the connection protects the submission in transit. The server must still validate the input, restrict access, and store it appropriately. A POST request alone does not encrypt a submission; the protected connection matters.</p><p>To explore this distinction, inspect the connection information for a familiar HTTPS site. Find the hostname and certificate details. Browser interfaces differ, so the location of these controls can vary.</p></section>
+        <p>Keep learning <a href="concepts.html">Explore the seven key concepts ↗</a></p>
+      
+    
+  </main>
+  
+  <footer>
+    <p>Created by Deborah Daramola | Fall 2026</p>
+    <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Web Development</a>.</p>
+  </footer>
+</body>
+</html>
