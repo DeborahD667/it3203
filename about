@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A web development research project by Deborah Daramola, built around the evolution of HTTP and HTTPS.">
+  <title>About the project</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- The same header and menu appear on every page. -->
+  <header class="site-header">
+    <p class="site-title">HTTP and HTTPS</p>
+    <p>Deborah Daramola | IT 3203</p>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="evolution.html">HTTP History</a>
+      <a href="https.html">HTTPS</a>
+      <a href="concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html" aria-current="page">About</a>
+    </nav>
+  </header>
+  <!-- Main research content. -->
+  <main id="main">
+    <header>
+      <h1>About the project</h1>
+      <p>A web development research project by Deborah Daramola, built around the evolution of HTTP and HTTPS.</p>
+    </header>
+    
+      
+        <section><h2>About the author</h2><p>I am Deborah Daramola, and I created this website as a research project for IT 3203. My topic explores the evolution of HTTP and HTTPS and the relationship between web performance, communication, and security.</p><p>This project gives me a way to practice presenting technical information through a clear, accessible website. The content builds on my Assignment 1 research and connects protocol concepts to familiar browsing tasks.</p></section>
+        <section><h2>Project focus</h2><p>The site explains why HTTP changed, how HTTPS protects communication, and which concepts remain useful across versions. It aims to help a beginning web development student understand the connection between a browser request and the technologies carrying it.</p><h3>Skills demonstrated</h3><ul><li>Semantic HTML and a consistent structure across six pages.</li><li>One shared CSS stylesheet with element, class, and ID selectors.</li><li>CSS Grid and Flexbox, with readable navigation and page layouts.</li><li>Accessible images, a comparison table, and linked research citations.</li></ul></section>
+        <section><h2>Learning objectives</h2><ol><li>Explain the differences among major HTTP versions.</li><li>Distinguish secure transport from broader website trust.</li><li>Connect requests, responses, and status codes to real browser activity.</li><li>Present research with clear navigation and reliable references.</li></ol></section>
+        <section><h2>Milestone roadmap</h2><p>Milestone 1 establishes this informational HTML/CSS site. Later milestones will add a JavaScript knowledge quiz and develop the final responsive experience and research. This version includes basic flexible layouts so the content remains readable.</p><p class="source-note">This website is an educational project, not a commercial product or security assessment.</p></section>
+      
+    
+  </main>
+  
+  <footer>
+    <p>Created by Deborah Daramola | Fall 2026</p>
+    <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Web Development</a>.</p>
+  </footer>
+</body>
+</html>
