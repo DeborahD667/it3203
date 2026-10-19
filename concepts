@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Short explanations and examples that connect protocol history to everyday web development.">
+  <title>Seven concepts to know</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- The same header and menu appear on every page. -->
+  <header class="site-header">
+    <p class="site-title">HTTP and HTTPS</p>
+    <p>Deborah Daramola | IT 3203</p>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="evolution.html">HTTP History</a>
+      <a href="https.html">HTTPS</a>
+      <a href="concepts.html" aria-current="page">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <!-- Main research content. -->
+  <main id="main">
+    <header>
+      <h1>Seven concepts to know</h1>
+      <p>Short explanations and examples that connect protocol history to everyday web development.</p>
+    </header>
+    
+      
+        <section id="request"><h2>Request</h2><p>A client message that asks a server to perform an operation on a resource. It identifies a method and target, includes fields, and may carry content.</p><pre><code>GET /index.html HTTP/1.1
+Host: example.edu</code></pre><p class="source-note">Illustrative HTTP/1.1 syntax. Source: <a href="references.html#rfc9110">[5]</a>.</p></section>
+        <section id="response"><h2>Response</h2><p>The server’s answer to a request. It communicates the result and can return a representation such as HTML, JSON, or an image.</p><pre><code>HTTP/1.1 200 OK
+Content-Type: text/html</code></pre><p class="source-note">Illustrative response headers. Source: <a href="references.html#rfc9110">[5]</a>.</p></section>
+        <section id="method"><h2>Method</h2><p>The operation named in a request. GET retrieves a representation, HEAD requests the corresponding metadata without response content, and POST asks the resource to process submitted content. A method name describes intent, not a security guarantee. <a href="references.html#rfc9110">[5]</a></p></section>
+        <section id="status"><h2>Status code</h2><p>A three-digit result code. The first digit groups the outcome: 1xx informational, 2xx successful, 3xx redirection, 4xx client error, and 5xx server error. Examples include 200 OK, 404 Not Found, and 503 Service Unavailable. <a href="references.html#rfc9110">[5]</a></p></section>
+        <section id="headers"><h2>Headers</h2><p>Fields that carry metadata or control information. Content-Type identifies a media type, while Cache-Control communicates caching instructions. Headers allow HTTP to support additional behavior without replacing its core message model. <a href="references.html#rfc9110">[5]</a></p></section>
+        <section id="tls"><h2>Transport Layer Security</h2><p>TLS establishes cryptographic protection between communicating endpoints. Modern HTTPS uses it to protect data in transit and usually authenticate the server. Certificates and session keys have different jobs: the certificate supports identity checks, while negotiated keys protect the data exchange. <a href="references.html#rfc8446">[6]</a></p></section>
+        <section id="multiplexing"><h2>Multiplexing</h2><p>Allowing multiple streams to share a connection. HTTP/2 interleaves frames from separate streams over TCP. HTTP/3 uses QUIC streams, reducing cross-stream delivery blocking caused by lost data. Shared congestion and other constraints still affect performance. <a href="references.html#rfc9113">[3]</a> <a href="references.html#rfc9114">[4]</a></p></section>
+        <p>Check the evidence <a href="references.html">Read the original sources ↗</a></p>
+      
+    
+  </main>
+  
+  <footer>
+    <p>Created by Deborah Daramola | Fall 2026</p>
+    <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Web Development</a>.</p>
+  </footer>
+</body>
+</html>
