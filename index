@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="From simple document requests to encrypted, multiplexed connections. Explore how the Web’s conversation evolved.">
+  <title>The evolution of HTTP and HTTPS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- The same header and menu appear on every page. -->
+  <header class="site-header">
+    <p class="site-title">HTTP and HTTPS</p>
+    <p>Deborah Daramola | IT 3203</p>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="evolution.html">HTTP History</a>
+      <a href="https.html">HTTPS</a>
+      <a href="concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <!-- Main research content. -->
+  <main id="main">
+    <header>
+      <h1>The evolution of HTTP and HTTPS</h1>
+      <p>From simple document requests to encrypted, multiplexed connections. Explore how the Web’s conversation evolved.</p>
+    </header>
+    
+      <section aria-labelledby="overview">
+        <h2 id="overview">A small protocol. A changing Web.</h2>
+        <p>Every time a browser asks for a page, a conversation begins. HTTP defines the requests and responses in that conversation. Its evolution shows how the Web adapted from linked documents to applications, APIs, and media.</p>
+        <p>This research follows HTTP from its early form through HTTP/3, then explains how HTTPS protects the connection. The central idea is continuity: familiar methods and status codes remain useful even when message formats and transports change.</p>
+        <p class="source-note">Research basis: <a href="references.html#rfc9110">RFC 9110</a>, <a href="references.html#rfc9113">RFC 9113</a>, and <a href="references.html#rfc9114">RFC 9114</a>.</p>
+        <a href="evolution.html">Start with HTTP evolution ↗</a>
+      </section>
+      <aside aria-labelledby="contents-title">
+        <h2 id="contents-title">Contents</h2>
+        <ol>
+          <li><a href="evolution.html"><strong>HTTP evolution</strong></a><p>Versions, transport, and performance.</p></li>
+          <li><a href="https.html"><strong>HTTPS &amp; security</strong></a><p>Encryption, trust, and their limits.</p></li>
+          <li><a href="concepts.html"><strong>Key concepts</strong></a><p>Seven terms that connect the story.</p></li>
+          <li><a href="references.html"><strong>References</strong></a><p>Standards and further learning.</p></li>
+          <li><a href="about.html"><strong>About this project</strong></a><p>The author and learning objectives.</p></li>
+        </ol>
+      </aside>
+    
+    <section aria-labelledby="conversation-title">
+      <h2 id="conversation-title">The request–response conversation</h2>
+      <figure>
+        <img src="assets/http-exchange.svg" width="1000" height="340" alt="A browser sends a GET request to a server. The server returns a 200 OK response and the requested HTML.">
+        <figcaption>Figure 1. A simplified exchange. A page can trigger additional requests for stylesheets, images, and other resources. Original illustration based on RFC 9110.</figcaption>
+      </figure>
+    </section>
+    <section aria-labelledby="terms-title">
+      <h2 id="terms-title">Key terms at a glance</h2>
+      <p>HTTP · HTTPS · request · response · TLS · certificate · multiplexing</p>
+      <a href="concepts.html">Read the definitions</a>
+    </section>
+  </main>
+  
+  <footer>
+    <p>Created by Deborah Daramola | Fall 2026</p>
+    <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Web Development</a>.</p>
+  </footer>
+</body>
+</html>
