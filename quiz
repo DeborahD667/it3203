@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A timed self-assessment on HTTP and HTTPS.">
+  <title>HTTP and HTTPS Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- The same header and menu appear on every page. -->
+  <header class="site-header">
+    <p class="site-title">HTTP and HTTPS</p>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="evolution.html">History</a>
+      <a href="https.html">HTTPS</a>
+      <a href="concepts.html">Key Terms</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+      <a href="quiz.html" aria-current="page">Quiz</a>
+    </nav>
+  </header>
+  <main id="main" class="quiz-page">
+    <h1>HTTP and HTTPS Quiz</h1>
+    <p>You have 10 minutes. Get 7 out of 10 right to pass. The quiz submits when time runs out.</p>
+    <p class="quiz-timer">Time remaining: <strong id="timer" role="timer">10:00</strong></p>
+    <button type="button" id="start">Start Quiz</button>
+    <form id="quiz" hidden>
+      <div id="questions"></div>
+      <div class="quiz-actions">
+        <button type="submit" id="submit">Submit Quiz</button>
+        <button type="button" id="retake">Start Over</button>
+      </div>
+    </form>
+    <section id="results" aria-labelledby="result-title" hidden>
+      <h2 id="result-title" tabindex="-1">Quiz Results</h2>
+      <p id="score"></p>
+      <p id="elapsed"></p>
+      <ol id="feedback"></ol>
+      <button type="button" id="try-again">Retake Quiz</button>
+    </section>
+    <noscript><p>Enable JavaScript to take this quiz.</p></noscript>
+  </main>
+  
+  <footer>
+    <p>Created by Deborah Daramola | Fall 2026</p>
+    <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/">IT 3203 Web Development</a>.</p>
+  </footer>
+  <script src="quiz.js" defer></script>
+</body>
+</html>
